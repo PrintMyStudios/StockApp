@@ -1,0 +1,144 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXGroup section */
+		MainGroup = {
+			isa = PBXGroup;
+			children = (
+				AppGroup,
+				ModelsGroup,
+				ServicesGroup,
+				ViewsGroup,
+				ViewModelsGroup,
+				UtilitiesGroup,
+				ResourcesGroup,
+			);
+			sourceTree = "<group>";
+		};
+		AppGroup = {
+			isa = PBXGroup;
+			name = App;
+			path = PortfolioHindsight/App;
+			sourceTree = "<group>";
+		};
+		ModelsGroup = {
+			isa = PBXGroup;
+			name = Models;
+			path = PortfolioHindsight/Models;
+			sourceTree = "<group>";
+		};
+		ServicesGroup = {
+			isa = PBXGroup;
+			name = Services;
+			path = PortfolioHindsight/Services;
+			sourceTree = "<group>";
+		};
+		ViewsGroup = {
+			isa = PBXGroup;
+			name = Views;
+			path = PortfolioHindsight/Views;
+			sourceTree = "<group>";
+		};
+		ViewModelsGroup = {
+			isa = PBXGroup;
+			name = ViewModels;
+			path = PortfolioHindsight/ViewModels;
+			sourceTree = "<group>";
+		};
+		UtilitiesGroup = {
+			isa = PBXGroup;
+			name = Utilities;
+			path = PortfolioHindsight/Utilities;
+			sourceTree = "<group>";
+		};
+		ResourcesGroup = {
+			isa = PBXGroup;
+			name = Resources;
+			path = PortfolioHindsight/Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		ProjectObject = {
+			isa = PBXProject;
+			buildConfigurationList = BuildConfigurationList;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = MainGroup;
+			productRefGroup = MainGroup;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		DebugConfig = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "PortfolioHindsight/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.portfoliohindsight.app";
+				PRODUCT_NAME = "Portfolio Hindsight";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ReleaseConfig = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "PortfolioHindsight/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.portfoliohindsight.app";
+				PRODUCT_NAME = "Portfolio Hindsight";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BuildConfigurationList = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DebugConfig,
+				ReleaseConfig,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = ProjectObject;
+}

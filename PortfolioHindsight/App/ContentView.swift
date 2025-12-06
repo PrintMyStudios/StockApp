@@ -113,27 +113,65 @@ struct FeatureRow: View {
 }
 
 struct MainTabView: View {
+    @State private var selectedTab = 0
+    @State private var showSettings = false
+
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             DashboardView()
                 .tabItem {
                     Label("Dashboard", systemImage: "square.grid.2x2")
                 }
+                .tag(0)
 
             TimelineView()
                 .tabItem {
                     Label("Timeline", systemImage: "chart.xyaxis.line")
                 }
+                .tag(1)
 
             CompareView()
                 .tabItem {
                     Label("Compare", systemImage: "arrow.left.arrow.right")
                 }
+                .tag(2)
 
             TradesListView()
                 .tabItem {
                     Label("Trades", systemImage: "list.bullet")
                 }
+                .tag(3)
+
+            SettingsTabView(showSettings: $showSettings)
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
+                }
+                .tag(4)
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
+        }
+    }
+}
+
+struct SettingsTabView: View {
+    @Binding var showSettings: Bool
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Label("Open Settings", systemImage: "gearshape")
+                    }
+                }
+            }
+            .navigationTitle("Settings")
+            .onAppear {
+                showSettings = true
+            }
         }
     }
 }

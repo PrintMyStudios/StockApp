@@ -41,6 +41,28 @@ struct DashboardView: View {
                         holdingsCount: holdings.count,
                         dividends: transactions.filter { $0.type == .dividend }.reduce(0) { $0 + $1.totalInBaseCurrency }
                     )
+
+                    // Insights link
+                    if !transactions.isEmpty {
+                        NavigationLink {
+                            InsightsView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "lightbulb.fill")
+                                    .foregroundStyle(.yellow)
+                                Text("View Insights")
+                                    .fontWeight(.medium)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding()
+                            .background(.regularMaterial)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
                 .padding()
             }
